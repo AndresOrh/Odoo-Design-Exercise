@@ -1,0 +1,56 @@
+%btn-animated {
+    font-weight: 600;
+    box-shadow: $shadow-md;
+    transition: $transition-base;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+
+    .icon-btn {
+        width: 18px;
+        height: 18px;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-lg;
+        
+        .icon-btn {
+            transform: translateX(4px);
+        }
+    }
+
+    @media (max-width: $breakpoint-md) {
+        font-size: 0.9rem;
+
+        .icon-btn {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.btn-light {
+    @extend %btn-animated;
+    background: $white;
+    color: $dark-color;
+    padding: 0.75rem 2rem;
+
+    @media (max-width: $breakpoint-md) {
+        padding: 0.625rem 1.5rem;
+    }
+}
+
+.btn-primary {
+    &.btn-animated { 
+        @extend %btn-animated;
+        background-color: $primary;
+        color: $white;
+        padding: 0.5rem 1.5rem;
+
+        @media (max-width: $breakpoint-md) {
+            padding: 0.625rem 1.5rem;
+        }
+    }
+}

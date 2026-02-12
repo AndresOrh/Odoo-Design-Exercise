@@ -1,0 +1,91 @@
+.awards-section {
+    background-color: $light-bg;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    padding-bottom: 20rem !important;
+    z-index: 1;
+
+    h2 {
+        font-size: x-large;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        padding-bottom: 14rem;
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
+
+    .awards-grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.5rem;
+
+        @media (max-width: $breakpoint-xl) {
+            grid-template-columns: repeat(3, 1fr);
+
+            .award-card.mt-lg-5 {
+                margin-top: 0 !important;
+            }
+        }
+
+        @media (max-width: $breakpoint-md) {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+    }
+
+    .award-card {
+        background-color: $white;
+        border-radius: $border-radius-sm;
+        box-shadow: $shadow-md;
+        transition: all 0.3s ease;
+        border: 1px solid $border-color;
+        height: 100%;
+        min-height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .card-body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        &:hover{
+            transform: translateY(-10px);
+            box-shadow: $shadow-lg;
+            cursor: pointer;
+        }
+
+        .brand-logo {
+            height: 32px;
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .icon-xs {
+            width: 16px;
+            height: 16px;
+        }
+
+        p.small {
+            margin-bottom: 1.5rem;
+            max-width: 180px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        a {
+            margin-top: 0;
+        }
+
+        .fill-current {
+            fill: none;
+        }
+        
+    }
+}

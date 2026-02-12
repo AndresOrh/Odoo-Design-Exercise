@@ -1,0 +1,53 @@
+
+//Colors
+$primary: #038AFF;
+$text-description: #FAFBFF;
+$subtitle: #161348;
+$success: #5CCAA7;
+$badge-orange: #FEBD3D;
+$progress-bar: #FEBD3D;
+$dark-color: #161348;
+$light-bg: #FAFBFF;
+$white: #FFFFFF;
+$hover-gray: #EDEDED;
+$border-color: #F1F5F9;
+$text-muted: #64748B;
+$badge-blue: $primary;
+$badge-success: $success;
+
+//Typography
+$font-family-base: 'Inter', sans-serif, 'Roboto', sans-serif;
+$font-size-base: 1rem;
+$font-size-sm: 0.7rem;
+$line-height-base: 1.5;
+
+//Spacing
+$section-padding: 5rem 5rem 8rem;
+$section-padding-sm: 3rem 3rem 5rem;
+$card-padding: 2rem;
+
+//Border radius
+$border-radius: 0.5rem;
+$border-radius-sm: 0.75rem;
+$border-radius-lg: 1rem;
+$border-radius-xl: 1.5rem;
+
+//Shadows
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+$shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+//Transitions
+$transition-base: all 0.3s ease;
+$transition-fast: all 0.2s ease;
+
+//Media Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+//Buttons
+$btn-primary: $white;
+$btn-secondary: $primary;

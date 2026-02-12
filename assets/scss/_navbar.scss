@@ -1,0 +1,164 @@
+.navbar {
+    padding: 1rem 0;
+    background: $primary;
+    transition: $transition-base;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    color: $white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    font-family: $font-family-base;
+
+    &.scrolled{
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        background: darken($primary, 5%);
+    }
+
+    .container {
+        max-width: 1200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .navbar-toggler{
+        border: none;
+        padding: 0.5rem;
+
+        &:focus {
+            box-shadow: none;
+            outline: none;
+        }
+
+        .navbar-toggler-icon{
+            width: 25px;
+            height: 10px;
+            background-color: $white;
+            filter: invert(1);
+            display: block;
+            position: relative;
+            transition: $transition-base;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 2px;
+                background-color: $white;
+                transition: $transition-base;
+            }
+
+            &::before{
+                top: -8px;
+            }
+
+            &::after {
+                top: 8px;
+            }
+        }
+    }
+
+    .navbar-collapse {
+        flex-grow: 1;
+        align-items: center;
+        
+        @media (max-width: $breakpoint-lg) {
+            background: $primary;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 1rem;
+        }
+    }
+
+    .navbar-nav {
+        @media (max-width: $breakpoint-lg){
+            margin-bottom: 1rem;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .nav-link{
+        color: $gray-200;
+        font-weight: 400;
+        padding: 0.5rem 1rem;
+        transition: $transition-base;
+        position: relative;
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: $primary;
+            transition: $transition-base;
+            transform: translateX(-50%);
+        }
+
+        &:hover {
+            color: $white;
+            font-weight: 500;
+
+            &::after{
+                width: 60%;
+            }
+        }
+
+        @media (max-width: $breakpoint-lg) {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid $border-color;
+            width: 100%;
+            text-align: center;
+
+            &:last-child{
+                border-bottom: none;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .btn-primary {
+        padding: 0.5rem 1.5rem;
+        font-weight: 400;
+        background-color: $btn-primary;
+        color: $dark-color;
+        border-radius: $border-radius;
+        outline: none;
+
+        &:hover {
+            background-color: $gray-200;
+            font-weight: 500;
+        }
+
+        @media (max-width: $breakpoint-lg) {
+            width: 100%;
+        }
+    }
+
+    .btn-link {
+        color: $gray-200;
+        font-weight: 400;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+
+        &:hover {
+            color: $white;
+            font-weight: 500;
+        }
+
+        @media (max-width: $breakpoint-lg) {
+            width: 100%;
+            text-align: center;
+            display: block;
+        }
+    }
+}

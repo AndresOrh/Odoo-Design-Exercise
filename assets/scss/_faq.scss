@@ -1,0 +1,77 @@
+.faq-section {
+    padding-top: 5rem;
+    background-color: $white;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    padding-bottom: 20rem !important;
+    z-index: 1;
+    overflow: hidden;
+
+    @media (max-width: $breakpoint-sm) {
+        padding-bottom: 13rem;
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
+
+    .custom-accordion{
+        .accordion-item {
+            border: 1px $border-color;
+            border-radius: $border-radius-sm;
+            overflow: hidden;
+            box-shadow: $shadow-md;
+            background: $white;
+
+            &:not(:first-of-type) {
+                border-top: 1px solid $border-color;
+            }
+        }
+
+        .accordion-button {
+            background-color: $white;
+            padding: 1.25rem 1.5rem;
+            box-shadow: none !important;
+            border-radius: $border-radius-sm;
+
+            &::after {
+                display: none;
+            }
+
+            .accordion-icon {
+                width: 20px;
+                height: 20px;
+                transition: transform 0.3s ease;
+                color: $dark-color;
+            }
+
+            &:not(.collapsed) {
+                background-color: $white;
+                color: initial;
+
+                .accordion-icon {
+                    transform: rotate(45deg);
+                }
+            }
+
+            .icon-md {
+                width: 20px;
+                height: 20px;
+                opacity: 0.8;
+            }
+        }
+
+        .accordion-body {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            padding-top: 0;
+            line-height: 1.6;
+        }
+    }
+
+    .btn-primary {
+        @extend %btn-animated;
+        background-color: $primary;
+        color: $white;
+        padding: 0.5rem 1.5rem;
+
+        @media (max-width: $breakpoint-md) {
+            padding: 0.625rem 1.5rem;
+        }
+    }
+}

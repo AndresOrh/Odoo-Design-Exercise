@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Odoo - Development done right." />
+    <title>Odoo Design exercise</title>
+
+    <!--Lucide Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!--Styles-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+
+  <body>
+    <!--Navigation bar-->
+    <nav
+      class="navbar navbar-expand-lg navbar-light d-flex flex-column flex-lg-grow"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <img src="assets/img/odoo-white.svg" alt="Odoo" height="32" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-expanded="false"
+          aria-controls="navbarNav"
+        >
+          <i class="bi bi-list text-white"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#home"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#products"> Products </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pages"> Pages </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#app"> App </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#docs"> Docs </a>
+            </li>
+          </ul>
+
+          <div
+            class="d-flex flex-column flex-lg-row gap-3 align-items-center w-100 w-lg-auto mt-3 mt-lg-0"
+          >
+            <a href="#" class="btn-link">Sign In</a>
+            <a href="#" class="btn btn-primary"
+              ><i data-lucide="shopping-bag" class="me-2"></i>Buy now</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--First section (Hero section)-->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 text-center text-lg-start">
+            <h1 class="text-white mb-4">Development<br />done right</h1>
+            <p class="mb-4 text-description">
+              Build a beautiful, modern website with<br
+                class="d-none d-md-block"
+              />
+              flexible components built from scratch.
+            </p>
+            <button class="btn btn-light mb-5">
+              Get started<i data-lucide="move-right" class="ms-1 icon-btn"></i>
+              <!--I personally think an arrow ( -> ) icon would be better for this button-->
+            </button>
+
+            <div class="partners align-middle">
+              <div
+                class="d-flex gap-4 align-items-center flex-wrap justify-content-center justify-content-lg-start"
+              >
+                <p class="text-white fs-6 opacity-75">Trusted by:</p>
+                <img
+                  src="assets/img/google-white.svg"
+                  alt="Google"
+                  class="partner-logo"
+                />
+                <img
+                  src="assets/img/spotify-white.svg"
+                  alt="Spotify"
+                  class="partner-logo"
+                />
+                <img
+                  src="assets/img/airbnb-white.svg"
+                  alt="Airbnb"
+                  class="partner-logo"
+                />
+                <img
+                  src="assets/img/paypal-white.svg"
+                  alt="Paypal"
+                  class="partner-logo"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
+            <div class="credit-card-mockup mx-auto">
+              <div class="card border-0">
+                <div class="card-body p-4">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-4"
+                  >
+                    <h2 class="mb-0 fw-bold">Manage cards</h2>
+                    <button class="btn btn-outline-light-custom btn-sm">
+                      Add new
+                    </button>
+                  </div>
+                  <div class="credit-card p-4 mb-4">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-4"
+                    >
+                      <img
+                        src="assets/img/mastercard.svg"
+                        alt="Mastercard"
+                        style="width: 40px"
+                      />
+                      <span class="badge bg-success">Active</span>
+                    </div>
+
+                    <div class="mb-4">
+                      <span class="small d-block mb-1">CARD NUMBER</span>
+                      <h5>4358 - 7421 - 9256 - 6682</h5>
+                    </div>
+
+                    <div class="d-flex gap-5">
+                      <div>
+                        <span class="small d-block mb-1">NAME</span>
+                        <p class="mb-0 fw-medium">John Snow</p>
+                      </div>
+                      <div>
+                        <span class="small d-block mb-1">EXPIRY DATE</span>
+                        <p class="mb-0 fw-medium">11/23</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="card-container-item d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <p class="mb-0 fw-bold">Starbucks</p>
+                      <span class="text-muted small"
+                        >Pending - San Francisco, US</span
+                      >
+                    </div>
+                    <span class="fw-bold">$5,50 USD</span>
+                  </div>
+
+                  <div
+                    class="card-container-item d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <p class="mb-0 fw-bold">Nike Sports</p>
+                      <span class="text-muted small"
+                        >Pending - Lisbon, Portugal</span
+                      >
+                    </div>
+                    <span class="fw-bold">$129,00 USD</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="btn btn-link p-0 mt-3 ms-3 fw-bold text-decoration-none icon-btn"
+                    >View all<i
+                      data-lucide="chevron-right"
+                      class="ms-1 icon-btn"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Products (Tools, Features, Technology)-->
+    <section class="products-section" id="products">
+      <div class="container">
+        <!--Tools-->
+        <div class="feature-row row align-items-center g-5">
+          <div class="col-lg-6 col-image">
+            <div class="feature-image-container">
+              <button class="play-video-btn">
+                Play video <i data-lucide="play" class="ms-2 icon-xs"></i>
+              </button>
+              <img src="assets/img/img_01.jpg" class="main-img img-fluid" />
+              <div class="awesome-projects-card">
+                <h6 class="card-title">Awesome projects</h6>
+                <div class="projects-card-item">
+                  <span class="item-title">Create the new logo</span>
+                  <div class="custom-progress">
+                    <div class="bar" style="width: 70%"></div>
+                  </div>
+                </div>
+                <div class="projects-card-item">
+                  <span class="item-title">Set up the color palette</span>
+                  <div class="custom-progress">
+                    <div class="bar" style="width: 52%"></div>
+                  </div>
+                </div>
+                <div class="projects-card-item">
+                  <span class="item-title">Wireframe and prototype</span>
+                  <div class="custom-progress">
+                    <div class="bar" style="width: 88%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-text ps-lg-5">
+            <span class="badge rounded-pill mb-3 px-3 py-2 bg-warning"
+              >Tools</span
+            >
+            <h2 class="fw-bold mb-3">We build for designers and developers</h2>
+            <p class="text-muted lead">
+              Get components and examples, including tons of variables that will
+              help you grow your business.
+            </p>
+          </div>
+        </div>
+        <!--Features-->
+        <div class="feature-row row align-items-center g-5 mt-5 mb-5">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <span
+              class="badge bg-success rounded-pill text-white mb-3 px-3 py-2"
+              >Features</span
+            >
+            <h2 class="fw-bold mb-4 display-6" style="font-size: 2rem">
+              Get components and examples, including tons of variables that will
+              help you grow your business.
+            </h2>
+
+            <ul class="list-unstyled mt-4">
+              <li class="d-flex align-items-center mb-3">
+                <div class="check-icon-circle me-3">
+                  <i data-lucide="check" class="icon-xs"></i>
+                </div>
+                <span class="text-muted fw-medium"
+                  >Perfect for modern startups</span
+                >
+              </li>
+              <li class="d-flex align-items-center">
+                <div class="check-icon-circle me-3">
+                  <i data-lucide="check" class="icon-xs"></i>
+                </div>
+                <span class="text-muted fw-medium"
+                  >Fully customizable and scalable</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 position-relative">
+            <div class="feature-image-container-right">
+              <img
+                src="assets/img/img_02.jpg"
+                alt="Features"
+                class="img-fluid rounded-4 shadow-lg w-100"
+              />
+
+              <button class="play-video-btn">
+                Play video <i data-lucide="play" class="ms-2 icon-xs"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--Technology-->
+        <div class="feature-row row align-items-center g-5 mt-5 mb-5">
+          <div class="col-lg-6">
+            <div class="row g-4">
+              <div class="col-12 col-md-6 mt5">
+                <div
+                  class="card border-0 shadow-sm mb-4 overflow-hidden rounded-4"
+                >
+                  <img
+                    src="assets/img/person_03.jpg"
+                    class="card-img-top jimmy-image"
+                  />
+                  <div class="card-body p-3">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center gap-2">
+                        <span
+                          class="badge rounded-circle bg-warning text-white p-2 d-flex align-items-center justify-content-center"
+                          style="width: 32px; height: 32px"
+                          >JH</span
+                        >
+                        <span class="fw-bold small text-dark"
+                          >Jimmy Hendrix</span
+                        >
+                      </div>
+                      <i data-lucide="heart" class="text-muted icon-xs"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="card border-0 shadow-sm rounded-4 p-3">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="check-icon-circle me-3">
+                      <i data-lucide="check" class="icon-sm"></i>
+                    </div>
+                    <div>
+                      <div class="fw-bold text-dark">300+ components</div>
+                      <div class="small text-muted">
+                        Built to be customized.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div
+                  class="card border-0 shadow-sm mb-4 rounded-4 p-4 text-center"
+                >
+                  <img
+                    src="assets/img/airbnb.svg"
+                    height="32"
+                    class="mb-3 mx-auto d-block"
+                  />
+                  <div
+                    class="d-flex justify-content-center gap-1 text-warning mb-4"
+                  >
+                    <i data-lucide="star" class="icon-xs fill-current"></i>
+                    <i data-lucide="star" class="icon-xs fill-current"></i>
+                    <i data-lucide="star" class="icon-xs fill-current"></i>
+                    <i data-lucide="star" class="icon-xs fill-current"></i>
+                    <i data-lucide="star" class="icon-xs text-muted"></i>
+                  </div>
+                  <h6 class="fw-bold mb-2">4.95 out of 5 stars</h6>
+                  <small class="text-muted mb-2">from 23 reviews</small>
+                </div>
+                <div class="card border-0 shadow-sm rounded-4 p-4 text-center">
+                  <div class="mb-3 d-flex justify-content-center">
+                    <div
+                      class="bg-dark text-white rounded-circle p-2 d-flex align-items-center justify-content-center"
+                    >
+                      <img
+                        src="assets/img/company_01.png"
+                        class="rounded-circle"
+                        width="32"
+                        height="32"
+                      />
+                    </div>
+                  </div>
+                  <h6 class="fw-bold mb-3">Website UI Kit</h6>
+                  <div
+                    class="avatar-group mb-4 justify-content-center d-flex pb-2 border-bottom border-1"
+                  >
+                    <img
+                      src="assets/img/person_01.jpg"
+                      class="rounded-circle border border-2 border-white"
+                      width="32"
+                      height="32"
+                    />
+                    <img
+                      src="assets/img/person_02.jpg"
+                      class="rounded-circle border border-2 border-white ms-n2"
+                      width="32"
+                      height="32"
+                      style="margin-left: -10px"
+                    />
+                    <img
+                      src="assets/img/person_03.jpg"
+                      class="rounded-circle border border-2 border-white ms-n2"
+                      width="32"
+                      height="32"
+                      style="margin-left: -10px"
+                    />
+                  </div>
+                  <div class="d-flex justify-content-center gap-4 text-muted">
+                    <i data-lucide="paperclip" class="icon-xs"></i>
+                    <i data-lucide="eye" class="icon-xs"></i>
+                    <i data-lucide="heart" class="icon-xs"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-text ps-lg-5 mt-5 mt-lg-0">
+            <span
+              class="badge rounded-pill bg-primary text-white mb-3 px-3 py-2"
+              >Technology</span
+            >
+            <h2 class="fw-bold mb-3 display-6" style="font-size: 2rem">
+              We use the latest technologies on the market
+            </h2>
+            <p class="text-muted lead mb-4">
+              Get components and examples, including tons of variables that will
+              help you grow your business.
+            </p>
+
+            <a
+              href="#"
+              class="text-primary fw-bold text-decoration-none link-hover-effect border-bottom border-primary pb-1"
+            >
+              See case studies
+            </a>
+          </div>
+        </div>
+        <!--Easy to install-->
+        <div class="feature-row row align-items-center g-5 mt-5">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <span
+              class="badge rounded-pill bg-warning text-white mb-3 px-3 py-2"
+              >Easy to install</span
+            >
+            <h2 class="fw-bold mb-3 display-6" style="font-size: 2rem">
+              Download, install and run.
+            </h2>
+            <p class="text-muted lead mb-5">
+              Get components and examples, including tons of variables that will
+              help you grow your business.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#" class="store-link">
+                <img src="assets/img/app-store-button.png" class="img-fluid" />
+              </a>
+              <a href="#" class="store-link">
+                <img
+                  src="assets/img/google-play-button.png"
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 position-relative">
+            <div class="feature-image-container-right">
+              <img
+                src="assets/img/img_03.jpg"
+                alt="Easy to install"
+                class="img-fluid rounded-4 shadow-lg w-100"
+              />
+              <button class="play-video-btn">
+                Play video <i data-lucide="play" class="ms-2 icon-xs"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--Infinite soluttions-->
+        <div class="infinite-solutions mt-5 p-5 text-white">
+          <div class="row align-items-center">
+            <div class="col-lg-7 mb-4 mb-lg-0">
+              <h2 class="fw-bold mb-3">Infinite solutions</h2>
+              <p class="mt-1 mb-0 opacity-75">
+                Intuitive markup, powerful and lightning fast build tools,
+                everything you need to turn your ideas into incredible products.
+              </p>
+            </div>
+
+            <div class="col-lg-5 text-lg-end">
+              <a
+                href="#"
+                class="btn btn-light fw-bold px-4 py-3 d-inline-flex align-items-center"
+              >
+                Learn more
+                <i data-lucide="move-right" class="ms-2 icon-btn"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Awards section-->
+    <section class="awards-section py-5 mb-5" id="awards">
+      <div class="container">
+        <div class="mb-5">
+          <span class="badge rounded-pill bg-primary text-white mb-3 px-3 py-2"
+            >Awards</span
+          >
+          <h2 class="fw-medium display-6">
+            Awards for design, creativity and innovation on the Internet
+          </h2>
+        </div>
+        <div class="awards-grid-container">
+          <div class="award-card mt-lg-5">
+            <div class="card-body text-center p-4">
+              <img
+                src="assets/img/airbnb.svg"
+                alt="Airbnb"
+                class="brand-logo mb-4"
+              />
+              <div
+                class="d-flex justify-content-center gap-1 text-warning mb-4"
+              >
+                <i data-lucide="star" class="icon-xs fill-current"></i>
+                <i data-lucide="star" class="icon-xs fill-current"></i>
+                <i data-lucide="star" class="icon-xs fill-current"></i>
+                <i data-lucide="star" class="icon-xs fill-current"></i>
+                <i data-lucide="star" class="icon-xs text-muted"></i>
+              </div>
+              <h5 class="fw-bold mb-1 fs-6">4.95 out of 5 stars</h5>
+              <p class="text-muted small mb-0">from 23 reviews</p>
+            </div>
+          </div>
+          <div class="award-card">
+            <div class="card-body text-center p-4 d-flex flex-column h-100">
+              <img
+                src="assets/img/amazon.svg"
+                alt="Amazon"
+                class="brand-logo mb-4"
+              />
+              <p class="text-muted small mb-4">
+                They build modern looking websites easily using Tabs.
+              </p>
+              <a
+                href="#"
+                class="fw-bold text-dark text-decoration-none border-bottom border-dark pb-1 d-inline-block mx-auto"
+                style="width: fit-content"
+                >Learn more</a
+              >
+            </div>
+          </div>
+          <div class="award-card mt-lg-5">
+            <div class="card-body text-center p-4 d-flex flex-column h-100">
+              <img
+                src="assets/img/slack.svg"
+                alt="Slack"
+                class="brand-logo mb-4"
+              />
+              <p class="text-muted small mb-4">
+                They build modern looking websites easily using Trello.
+              </p>
+              <a
+                href="#"
+                class="fw-bold text-dark text-decoration-none border-bottom border-dark pb-1 d-inline-block mx-auto"
+                style="width: fit-content"
+                >Learn more</a
+              >
+            </div>
+          </div>
+          <div class="award-card">
+            <div class="card-body text-center p-4">
+              <img
+                src="assets/img/spotify.svg"
+                alt="Spotify"
+                class="brand-logo mb-4"
+              />
+              <div
+                class="d-flex justify-content-center gap-1 text-warning mb-2"
+              >
+                <i data-lucide="star" class="icon-xs fill-current"></i>
+                <i data-lucide="star" class="icon-xs fill-current"></i>
+                <i data-lucide="star" class="icon-xs fill-current"></i>
+                <i data-lucide="star" class="icon-xs fill-current"></i>
+                <i data-lucide="star" class="icon-xs text-muted opacity-25"></i>
+              </div>
+              <h5 class="fw-bold mb-1 fs-6">4.95 out of 5 stars</h5>
+              <p class="text-muted small mb-0">from 23 reviews</p>
+            </div>
+          </div>
+          <div class="award-card mt-lg-5">
+            <div class="card-body text-center p-4 d-flex flex-column h-100">
+              <img
+                src="assets/img/paypal.svg"
+                alt="Paypal"
+                class="brand-logo mb-4"
+              />
+              <p class="text-muted small mb-4">
+                They build modern looking websites easily using Docker.
+              </p>
+              <a
+                href="#"
+                class="fw-bold text-dark text-decoration-none border-bottom border-dark pb-1 d-inline-block mx-auto"
+                style="width: fit-content"
+                >Learn more</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Helpful Answers sectionn-->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold mb-3 display-6">Helpful answers</h2>
+          <p class="text-muted" style="font-size: 1.1rem">
+            Start building fast, beautiful and modern looking websites in no
+            time.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="row g-4">
+              <div class="col-lg-6">
+                <div class="accordion custom-accordion" id="accordionLeft">
+                  <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqLeft1"
+                      >
+                        <i data-lucide="file-text" class="me-3 icon-md"></i>
+                        <span class="fw-bold">Which license do I need?</span>
+                        <i
+                          data-lucide="plus"
+                          class="accordion-icon ms-auto text-primary"
+                        ></i>
+                      </button>
+                    </h2>
+                    <div
+                      id="faqLeft1"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionLeft"
+                    >
+                      <div class="accordion-body text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqLeft2"
+                      >
+                        <i
+                          data-lucide="lock"
+                          class="me-3 text-dark-blue icon-md"
+                        ></i>
+                        <span class="fw-bold text-dark-blue"
+                          >How do I get access to my database?</span
+                        >
+                        <i
+                          data-lucide="plus"
+                          class="accordion-icon ms-auto text-primary"
+                        ></i>
+                      </button>
+                    </h2>
+                    <div
+                      id="faqLeft2"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionLeft"
+                    >
+                      <div class="accordion-body text-muted">
+                        Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqLeft3"
+                      >
+                        <i
+                          data-lucide="folder"
+                          class="me-3 text-dark-blue icon-md"
+                        ></i>
+                        <span class="fw-bold text-dark-blue"
+                          >How do I see previous orders?</span
+                        >
+                        <i
+                          data-lucide="plus"
+                          class="accordion-icon ms-auto text-primary"
+                        ></i>
+                      </button>
+                    </h2>
+                    <div
+                      id="faqLeft3"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionLeft"
+                    >
+                      <div class="accordion-body text-muted">
+                        Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="accordion custom-accordion" id="accordionRight">
+                  <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqRight1"
+                      >
+                        <i
+                          data-lucide="file-text"
+                          class="me-3 text-dark-blue icon-md"
+                        ></i>
+                        <span class="fw-bold text-dark-blue"
+                          >Which license do I need?</span
+                        >
+                        <i
+                          data-lucide="plus"
+                          class="accordion-icon ms-auto text-primary"
+                        ></i>
+                      </button>
+                    </h2>
+                    <div
+                      id="faqRight1"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionRight"
+                    >
+                      <div class="accordion-body text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqRight2"
+                      >
+                        <i
+                          data-lucide="lock"
+                          class="me-3 text-dark-blue icon-md"
+                        ></i>
+                        <span class="fw-bold text-dark-blue"
+                          >Which license do I need?</span
+                        >
+                        <i
+                          data-lucide="plus"
+                          class="accordion-icon ms-auto text-primary"
+                        ></i>
+                      </button>
+                    </h2>
+                    <div
+                      id="faqRight2"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionRight"
+                    >
+                      <div class="accordion-body text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqRight3"
+                      >
+                        <i
+                          data-lucide="folder"
+                          class="me-3 text-dark-blue icon-md"
+                        ></i>
+                        <span class="fw-bold text-dark-blue"
+                          >How do I see previous orders?</span
+                        >
+                        <i
+                          data-lucide="plus"
+                          class="accordion-icon ms-auto text-primary"
+                        ></i>
+                      </button>
+                    </h2>
+                    <div
+                      id="faqRight3"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionRight"
+                    >
+                      <div class="accordion-body text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <p class="h5 fw-bold mb-3">I want to start a new project.</p>
+          <div class="d-flex justify-content-center gap-3 align-items-center">
+            <a
+              href="#"
+              class="btn btn-primary d-inline-flex align-items-center text-white"
+            >
+              Buy now <i data-lucide="move-right" class="ms-2 icon-btn"></i>
+            </a>
+            <a href="#" class="text-muted fw-bold text-decoration-none"
+              >Learn more</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Footer-->
+    <footer class="footer-section" id="footer">
+      <div class="container">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6 mb-5 text-center text-lg-start">
+            <h2 class="fw-bold mb-2">Brilliant solutions for your ideas</h2>
+            <p class="test-white-50 mb-0">Modern looking websites</p>
+          </div>
+          <div class="col-lg-6 text-center text-lg-end mb-3">
+            <div
+              class="d-flex gap-3 justify-content-center justify-content-lg-end"
+            >
+              <a
+                href="https://www.odoo.com/documentation/19.0/"
+                class="btn btn-light d-inline-flex align-items-center fw-medium px-3"
+              >
+                <i data-lucide="file-text" class="icon-xs me-2"></i>
+                Documentation
+              </a>
+              <a href="#" class="btn btn-primary fw-medium px-4"
+                >Purchase now</a
+              >
+            </div>
+          </div>
+          <hr class="border-secondary opacity-25 mb-2" />
+          <div class="row g-5 mb-5">
+            <div class="col-lg-4">
+              <a href="#" class="d-block mb-4">
+                <img src="assets/img/odoo-white.svg" height="30" />
+              </a>
+              <p
+                class="text-white-50 mb-4 small"
+                style="line-height: 1.8; max-width: 300px"
+              >
+                Odoo attempts to bring the best development experience to
+                designers and developers by offering the tools needed for having
+                a quick and solid start in most web projects.
+              </p>
+              <div class="d-flex gap-4 social-icons">
+                <a href="https://www.odoo.com/es_ES"
+                  ><i data-lucide="globe" class="icon-sm"></i
+                ></a>
+                <a href="https://github.com/odoo"
+                  ><i data-lucide="github" class="icon-sm"></i
+                ></a>
+                <a href="https://www.instagram.com/odoo.official/"
+                  ><i data-lucide="instagram" class="icon-sm"></i
+                ></a>
+                <a href="https://www.facebook.com/odoo"
+                  ><i data-lucide="facebook" class="icon-sm"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-6 col-lg-2 offset-lg-2">
+              <h6 class="fw-bold mb-4">Account</h6>
+              <ul class="list-unstyled footer-links">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Billing</a></li>
+                <li><a href="#">Notifications</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2">
+              <h6 class="fw-bold mb-4">About</h6>
+              <ul class="list-unstyled footer-links">
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-2">
+              <h6 class="fw-bold mb-4">Company</h6>
+              <ul class="list-unstyled footer-links">
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Help center</a></li>
+                <li><a href="#">Support</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row align-items-center pt-4 footer-bottom">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              <p class="small text-white-50 mb-0">
+                &copy; Odoo. All rights reserved
+              </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <div
+                class="d-flex gap-4 justify-content-center justify-content-md-end"
+              >
+                <a href="#" class="small text-white-50 text-decoration-none"
+                  >Terms</a
+                >
+                <a href="#" class="small text-white-50 text-decoration-none"
+                  >Privacy</a
+                >
+                <a href="#" class="small text-white-50 text-decoration-none"
+                  >Cookies</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--Scripts-->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

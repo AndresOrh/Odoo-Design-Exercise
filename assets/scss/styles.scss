@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "../../node_modules/bootstrap/scss/functions";
+
+@import "variables";
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "buttons";
+@import "navbar";
+@import "hero";
+@import "products";
+@import "awards";
+@import "faq";
+@import "footer";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $dark-color;
+    overflow-x: hidden;
+}
+
+section{
+    padding: $section-padding;
+
+    @media (max-width: $breakpoint-md) {
+        padding: $section-padding-sm;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    transition: $transition-base;
+}
+
+p.lead {
+    font-size: clamp(1rem, 2vw, 1.25rem) !important;
+}
+
+h2{
+    font-size: clamp(1.5rem, 3vw, 2.5rem) !important;
+}
