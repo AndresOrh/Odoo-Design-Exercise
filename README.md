@@ -67,3 +67,7 @@ odoo-design-excercise/
 
 ## VS Code Extensions used in this exercise
 - Prettier (For code formatting)
+
+## Comments and main changes
+- The layout for mobile devices is a simple responsive layout that adjuste everything into a single column for every section.
+- Some icons were changed for consistency with daily use apps.
