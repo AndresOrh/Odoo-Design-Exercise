@@ -24,6 +24,16 @@
         padding-right: 15px;
     }
 
+    .icon-btn {
+        transition: transform 0.3s ease;
+        height: 16px;
+        width: 16px;
+
+        &:hover {
+            transform: translateX(4px);
+        }
+    }
+
     .navbar-toggler{
         border: none;
         padding: 0.5rem;
@@ -75,10 +85,23 @@
     }
 
     .navbar-nav {
-        @media (max-width: $breakpoint-lg){
-            margin-bottom: 1rem;
-            width: 100%;
-            text-align: center;
+        gap: 2rem;
+    }
+
+    .navbar-actions{
+        margin-left: auto;
+        gap: 1rem;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        .navbar .container{
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 

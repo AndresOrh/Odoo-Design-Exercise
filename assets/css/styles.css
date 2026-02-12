@@ -11936,6 +11936,14 @@ textarea.form-control-lg {
   padding-left: 15px;
   padding-right: 15px;
 }
+.navbar .icon-btn {
+  transition: transform 0.3s ease;
+  height: 16px;
+  width: 16px;
+}
+.navbar .icon-btn:hover {
+  transform: translateX(4px);
+}
 .navbar .navbar-toggler {
   border: none;
   padding: 0.5rem;
@@ -11979,11 +11987,21 @@ textarea.form-control-lg {
     border-radius: 1rem;
   }
 }
-@media (max-width: 992px) {
+.navbar .navbar-nav {
+  gap: 2rem;
+}
+.navbar .navbar-actions {
+  margin-left: auto;
+  gap: 1rem;
+}
+@media (min-width: 992px) {
+  .navbar .navbar .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
   .navbar .navbar-nav {
-    margin-bottom: 1rem;
-    width: 100%;
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .navbar .nav-link {
@@ -12169,6 +12187,23 @@ textarea.form-control-lg {
   background: #FFFFFF;
   border-bottom-right-radius: 80px;
 }
+.hero-section .credit-card-mockup .card h2, .hero-section .credit-card-mockup .card .h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 992px) {
+  .hero-section .credit-card-mockup .card h2, .hero-section .credit-card-mockup .card .h2 {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 576px) {
+  .hero-section .credit-card-mockup .card h2, .hero-section .credit-card-mockup .card .h2 {
+    font-size: 0.5rem;
+    letter-spacing: 0.05em;
+  }
+}
 .hero-section .credit-card-mockup .card .credit-card {
   background: #1F1247;
   border-radius: 1rem;
@@ -12194,24 +12229,6 @@ textarea.form-control-lg {
   width: 250px;
   height: 250px;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
-}
-.hero-section .credit-card-mockup .card .credit-card h2, .hero-section .credit-card-mockup .card .credit-card .h2 {
-  font-size: 1.4rem;
-  letter-spacing: 0.1em;
-  font-weight: 400;
-  position: relative;
-  z-index: 1;
-}
-@media (max-width: 992px) {
-  .hero-section .credit-card-mockup .card .credit-card h2, .hero-section .credit-card-mockup .card .credit-card .h2 {
-    font-size: 1.3rem;
-  }
-}
-@media (max-width: 576px) {
-  .hero-section .credit-card-mockup .card .credit-card h2, .hero-section .credit-card-mockup .card .credit-card .h2 {
-    font-size: 0.5rem;
-    letter-spacing: 0.05em;
-  }
 }
 .hero-section .credit-card-mockup .card .credit-card h5, .hero-section .credit-card-mockup .card .credit-card .h5 {
   font-size: 1.4rem;
