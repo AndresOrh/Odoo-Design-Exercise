@@ -2,6 +2,10 @@
 
 Created by: Andrés Orihuela Otero
 
+## Comments and main changes from the original version
+- The layout for mobile devices is a simple responsive layout that adjuste everything into a single column for every section.
+- Some icons were changed for consistency with daily use apps.
+- I decided to use Lucide Icons intead of Bootstrap icons due to its lightweight, highly optimized scalable vector graphics that help to keep the design clean and consistent.
 
 ## Tech Stack
 
@@ -67,7 +71,3 @@ odoo-design-excercise/
 
 ## VS Code Extensions used in this exercise
 - Prettier (For code formatting)
-
-## Comments and main changes
-- The layout for mobile devices is a simple responsive layout that adjuste everything into a single column for every section.
-- Some icons were changed for consistency with daily use apps.
